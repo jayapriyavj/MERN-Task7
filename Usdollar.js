@@ -4,6 +4,17 @@ request.send();
 request.onload = function () {
     var result = JSON.parse(request.response);
     console.log(result);
-    var respopulation = result.filter((value) => value.currencies.name === "United State dollar");
-    console.log(respopulation);
+    // var rescurrencies = result.map((value) => value.currencies);
+    // console.log(rescurrencies);
+    // var currencies1 = rescurrencies.filter((value) => value != undefined);
+    // console.log(currencies1);
+    // var currencies2 = currencies1.filter((value) => value.USD);
+    // console.log(currencies2);
+    var rescurrencies = result.filter((value) => value.currencies);
+    console.log(rescurrencies);
+    var currencies1 = rescurrencies.map((value) => value.currencies);
+    console.log(currencies1);
+    var currencies2 = currencies1.filter((value) => value.USD);
+    console.log(currencies2);
+
 }

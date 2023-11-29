@@ -4,12 +4,26 @@ request.send();
 request.onload = function () {
     var result = JSON.parse(request.response);
     console.log(result);
+    // countries name 
+    // result.forEach(function (result) {
+    //     result = result.name.common;
+    //     console.log(result);
 
-    result.forEach(name);
-    function name(value, index) {
-        value = value.common;
-        console.log("index is:" + index + "\n value is:" + value);
-    }
+    // });
 
+    // // flag
+    // result.forEach(function (result) {
+    //     result = result.flag;
+    //     console.log(result);
+
+    // });
+    
+    // // captial
+    result.forEach(function (result) {
+        result = result.captial;
+        console.log(result);
+
+    });
+    
 
 }
