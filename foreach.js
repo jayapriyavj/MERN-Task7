@@ -18,9 +18,9 @@ request.onload = function () {
 
     // });
     
-    // // captial
+    // // capital
     result.forEach(function (result) {
-        result = result.captial;
+        result = result.capital;
         console.log(result);
 
     });
